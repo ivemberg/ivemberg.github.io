@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hai pagato? — l'app per Area C e pedaggi free flow</title>
+<meta name="description" content="Hai pagato? ti ricorda di pagare l'Area C di Milano e i pedaggi senza casello di Pedemontana, A33 Asti-Cuneo e Corda Molle prima della scadenza. Gratuita per iPhone e Android.">
+<link rel="canonical" href="https://ivemberg.github.io/haipagato/">
+<meta name="apple-itunes-app" content="app-id=6816096003">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Hai pagato? — Area C e pedaggi free flow">
+<meta property="og:description" content="Ti ricorda di pagare l'Area C e i pedaggi senza casello prima della scadenza. Gratuita per iPhone e Android.">
+<meta property="og:url" content="https://ivemberg.github.io/haipagato/">
+<meta property="og:image" content="https://ivemberg.github.io/haipagato/icon.png">
+<meta property="og:locale" content="it_IT">
+<link rel="icon" href="icon.png">
+<link rel="apple-touch-icon" href="icon.png">
+<style>
+  :root {
+    color-scheme: light dark;
+    --text: #1d1d1f;
+    --muted: #5f6368;
+    --link: #1F4FD8;
+    --soft: #f3f5fa;
+    --button: #1F4FD8;
+    --button-text: #ffffff;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --text: #ececf1;
+      --muted: #a7abb5;
+      --link: #7B96FF;
+      --soft: #1e2029;
+      --button: #3f6af0;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    color: var(--text);
+    background: Canvas;
+    font: 17px/1.6 -apple-system, system-ui, "Segoe UI", Roboto, sans-serif;
+  }
+  main { max-width: 34rem; margin: 0 auto; padding: 2.5rem 1rem 3rem; text-align: center; }
+  a { color: var(--link); }
+  .icon { width: 96px; height: 96px; border-radius: 22px; }
+  h1 { font-size: 1.9rem; line-height: 1.2; margin: 1rem 0 0.5rem; }
+  .lead { font-size: 1.1rem; margin: 0 0 1.5rem; }
+  .stores { display: flex; flex-direction: column; gap: 0.75rem; max-width: 20rem; margin: 0 auto 1.5rem; }
+  .stores a {
+    display: block; padding: 0.85rem 1rem; border-radius: 12px; text-decoration: none;
+    background: var(--button); color: var(--button-text); font-weight: 600;
+  }
+  .stores a.secondary { background: var(--soft); color: var(--link); }
+  .qr { background: var(--soft); border-radius: 14px; padding: 1rem; margin: 2rem auto 0; max-width: 20rem; }
+  .qr img { width: 180px; height: 180px; background: #fff; border-radius: 8px; }
+  .qr p { margin: 0.5rem 0 0; font-size: 0.95rem; color: var(--muted); }
+  ul.points { text-align: left; max-width: 28rem; margin: 2rem auto 0; padding-left: 1.2rem; }
+  .meta { color: var(--muted); font-size: 0.9rem; }
+  footer { margin-top: 2.5rem; font-size: 0.9rem; color: var(--muted); }
+  @media (hover: none) and (pointer: coarse) { .qr { display: none; } }
+</style>
+</head>
+<body>
+<main>
+  <img class="icon" src="icon.png" alt="" width="96" height="96">
+  <h1>Hai pagato?</h1>
+  <p class="lead">Ti ricorda di pagare l'Area C di Milano e i pedaggi senza casello (Pedemontana A36, A59, A60, Asti-Cuneo A33, Corda Molle) prima della scadenza. Gratuita.</p>
+
+  <div class="stores">
+    <a id="ios" href="https://apps.apple.com/it/app/hai-pagato/id6816096003?pt=128669646&amp;ct=sito&amp;mt=8">Scarica dall'App Store</a>
+    <a id="android" class="secondary" href="https://play.google.com/store/apps/details?id=com.ivemberg.haipagato&amp;referrer=utm_source%3Dsito%26utm_medium%3Dlanding">Scarica da Google Play</a>
+  </div>
+
+  <div class="qr">
+    <img src="qr.png" alt="Codice QR che apre questa pagina sul telefono" width="180" height="180">
+    <p>Inquadra con la fotocamera del telefono: si apre lo store giusto.</p>
+  </div>
+
+  <ul class="points">
+    <li>Si accorge quando entri in Area C o passi su un tratto free flow, e ti dice quanto pagare ed entro quando.</li>
+    <li>Promemoria prima della scadenza; «Paga ora» apre il sito ufficiale: l'app non incassa niente.</li>
+    <li>Nessun account, e la tua posizione resta sul telefono.</li>
+  </ul>
+
+  <p class="meta">L'app ricorda, non garantisce: un passaggio può sfuggire, e la responsabilità del pagamento resta tua. Non è affiliata al Comune di Milano, ad ATM né ai gestori delle autostrade.</p>
+
+  <p><a href="come-pagare-pedemontana-area-c/">Come si pagano Area C, Pedemontana e gli altri pedaggi free flow</a></p>
+
+  <footer>
+    <p><a href="https://ivemberg.github.io/haipagato-rules/privacy/">Privacy</a> · <a href="mailto:haipagato.privacy@protonmail.com">Contatti</a> · © 2026 Ivo Bettini</p>
+  </footer>
+</main>
+<script>
+  // Da dove arriva chi apre la pagina: ?c=qr (il codice QR), ?c=varesenews (un articolo) e così
+  // via. Finisce nel link dell'App Store (campagna, `ct`) e in quello di Play (`utm_source`), per
+  // vedere i download di ogni canale nelle statistiche dei due store. Niente cookie, niente
+  // statistiche su questa pagina.
+  (function () {
+    var params = new URLSearchParams(location.search);
+    var raw = (params.get("c") || "").toLowerCase();
+    var campaign = /^[a-z0-9-]{1,30}$/.test(raw) ? raw : "";
+    var source = campaign || "sito";
+    var ios = "https://apps.apple.com/it/app/hai-pagato/id6816096003?pt=128669646&ct=" + source + "&mt=8";
+    var android = "https://play.google.com/store/apps/details?id=com.ivemberg.haipagato&referrer=" +
+      encodeURIComponent("utm_source=" + source + "&utm_medium=landing");
+    var iosLink = document.getElementById("ios");
+    var androidLink = document.getElementById("android");
+    iosLink.href = ios;
+    androidLink.href = android;
+
+    var ua = navigator.userAgent;
+    var isIOS = /iPhone|iPad|iPod/.test(ua) || (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
+    var isAndroid = /Android/.test(ua);
+    if (isAndroid) {
+      androidLink.className = "";
+      iosLink.className = "secondary";
+      iosLink.parentNode.insertBefore(androidLink, iosLink);
+    }
+    // Solo per chi arriva da un QR o da un link con la campagna: apre subito lo store giusto.
+    // Chi arriva dal sito vede la pagina e sceglie.
+    if (campaign) {
+      if (isIOS) location.replace(ios);
+      else if (isAndroid) location.replace(android);
+    }
+  })();
+</script>
+</body>
+</html>
