@@ -1,0 +1,12 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": ["X52R3T96JU.com.ivemberg.carillon"],
+        "components": [
+          { "/": "/lullabox/regalo/*", "comment": "Lullabox: a music box sent as a gift opens in the app" }
+        ]
+      }
+    ]
+  }
+}
